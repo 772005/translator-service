@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "api/translate.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/health",
-      "dest": "/health"
+      "src": "/api/translate",
+      "dest": "api/translate.js"
     },
     {
-      "src": "/translate",
-      "dest": "/translate"
+      "src": "/api/health",
+      "dest": "api/health.js"
     },
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "/index.html"
     }
   ]
 }
