@@ -17,6 +17,20 @@ app.use((req, res, next) => {
 });
 
 /**
+ * Service information endpoint
+ */
+app.get('/', (req, res) => {
+    res.json({
+        service: 'Translation Service',
+        status: 'online',
+        endpoints: {
+            health: '/health',
+            translate: '/translate'
+        }
+    });
+});
+
+/**
  * Health check endpoint
  */
 app.get('/health', (req, res) => {

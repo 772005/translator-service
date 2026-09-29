@@ -1,6 +1,7 @@
 {
   "version": 2,
   "rewrites": [
+    { "source": "/", "destination": "/api/index" },
     { "source": "/translate", "destination": "/api/translate" },
     { "source": "/health", "destination": "/api/health" }
   ]
